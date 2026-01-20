@@ -10,5 +10,6 @@ use std::io;
 use std::path::Path;
 
 fn main() {
-    println!("wizardry");
+    let mut siv = cursive::default();
+
 }
