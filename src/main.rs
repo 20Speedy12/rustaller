@@ -1,5 +1,10 @@
-use iced::widget::{column, button, progress_bar, Column};
-use iced::{Element, Length};
+use cursive::{
+    align::HAlign,
+    event::{EventResult, Key},
+    traits::With,
+    view::{scroll::Scroller, Scrollable},
+    views::{Dialog, OnEventView, Panel, TextView},
+};
 use std::fs;
 use std::io;
 use std::path::Path;
