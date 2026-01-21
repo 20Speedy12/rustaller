@@ -18,6 +18,6 @@ pub fn writetojson(paths: &str, installpaths: &str)
     let mut filer = FiletoPackage {
     installpath: installpaths.to_owned(),
     file: filename.to_owned()
-  };
+
 }
   
