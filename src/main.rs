@@ -8,9 +8,8 @@ use cursive::{
 use std::fs;
 use std::io;
 use std::path::Path;
-mod mtp
+mod mtp;
 
 fn main() {
     let mut siv = cursive::default();
-    
 }
