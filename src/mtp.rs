@@ -5,8 +5,8 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
 pub struct FiletoPackage {
-    installpath: &str,
-    file: &str,
+    installpath: String,
+    file: String,
 }
 
 pub fn writetojson(paths: &str, installpaths: &str)
