@@ -19,7 +19,7 @@ pub fn writetojson(paths: &str, installpaths: &str)
     installpath: installpaths.to_owned(),
     file: filename.to_owned()
     };
-    let jsoner = serde_json::to_string_pretty(filer);
-    fs::write("./bin/data.json", jsoner).expect("Failed to add file");
+    let jsoner = serde_json::to_string_pretty(&filer);
+    fs::write("./bin/data.json", jsoner as String).expect("Failed to add file");
 }
   
