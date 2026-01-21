@@ -5,12 +5,12 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
 pub struct FiletoPackage {
-    installpath: &str
-    path: &str
+    installpath: String,
+    path: String,
 }
 
-pub fn writetojson(path: &str)
+pub fn writetojson(path: &str, installpath: &str)
 {
-  println!("hi :D")
+  println!("hi :D");
 }
   
