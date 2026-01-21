@@ -18,6 +18,8 @@ pub fn writetojson(paths: &str, installpaths: &str)
     let mut filer = FiletoPackage {
     installpath: installpaths.to_owned(),
     file: filename.to_owned()
-
+    };
+    let jsoner = serde_json::to_string_pretty(&filer)?;
+    fs::write("./bin/data.json", pretty_json_string)
 }
   
