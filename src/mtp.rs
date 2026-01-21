@@ -7,13 +7,13 @@ use serde::{Deserialize, Serialize};
 pub struct FiletoPackage {
     installpath: String,
     file: String,
-};
+}
 
 pub fn writetojson(paths: &str, installpaths: &str)
 {
     let qwa = "./bin/";
     let filename = Path::new(paths).file_name().unwrap().to_str().unwrap();
-    let internalfilepath = qwa + filename;
+    let internalfilepath = qwa.to_owned() + filename;
     fs::copy(paths, internalfilepath);
     let mut filer = FiletoPackage {
     installpath: installpaths.to_owned(),
