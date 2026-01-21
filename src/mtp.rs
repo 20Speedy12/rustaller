@@ -5,12 +5,17 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize)]
 pub struct FiletoPackage {
-    installpath: String,
-    path: String,
+    installpath: &str,
+    file: &str,
 }
 
-pub fn writetojson(path: &str, installpath: &str)
+pub fn writetojson(paths: &str, installpaths: &str)
 {
-  println!("hi :D");
+    let filename = Path::new(paths).file_name().unwrap().to_str().unwrap();
+    fs::copy(paths, "./bin/{}", filename)
+  let mut filer = FiletoPackage {
+    installpath: installpaths.to_owned
+    file: filename.to_owned
+  }
 }
   
