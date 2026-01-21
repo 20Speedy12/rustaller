@@ -20,6 +20,6 @@ pub fn writetojson(paths: &str, installpaths: &str)
     file: filename.to_owned()
     };
     let jsoner = serde_json::to_string_pretty(&filer)?;
-    fs::write("./bin/data.json", pretty_json_string)
+    fs::write("./bin/data.json", jsoner)
 }
   
