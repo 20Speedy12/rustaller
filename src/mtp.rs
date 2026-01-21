@@ -11,11 +11,13 @@ pub struct FiletoPackage {
 
 pub fn writetojson(paths: &str, installpaths: &str)
 {
+    let qwa = "./bin/";
     let filename = Path::new(paths).file_name().unwrap().to_str().unwrap();
-    fs::copy(paths, "./bin/{}", filename);
-  let mut filer = FiletoPackage {
-    installpath: installpaths.to_owned,
-    file: filename.to_owned
+    let internalfilepath = qwa + filename;
+    fs::copy(paths, internalfilepath);
+    let mut filer = FiletoPackage {
+    installpath: installpaths.to_owned(),
+    file: filename.to_owned()
   };
 }
   
