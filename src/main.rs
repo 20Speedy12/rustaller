@@ -17,7 +17,7 @@ fn main() {
          Press q to quit the application.",
     ));
 
-    siv.add_global_callback('q', siv.q());
+    siv.add_global_callback('q',|s| s.quit());
     
     siv.run()
 }
