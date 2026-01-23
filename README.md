@@ -1,0 +1,1 @@
+This is an installer creator that uses cursive for the TUI and makes offline installers, and is meant for simple projects that requires more setup than just download and go, and is supposed to be at least compatible with Linux and windows
