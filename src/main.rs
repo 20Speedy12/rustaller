@@ -17,7 +17,7 @@ fn main() {
          Press q to quit the application.",
     ));
 
-    siv.add_global_callback('q', Cursive::quit);
+    siv.add_global_callback('q', cursive::quit);
     
-    siv.run
+    siv.run()
 }
