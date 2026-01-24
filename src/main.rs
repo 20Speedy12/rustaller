@@ -13,10 +13,14 @@ mod mtp;
 fn main() {
     let mut siv = cursive::default();
     siv.add_layer(TextView::new(
-        "Hello World!\n\
+        "Please type me for project\n\
          Press q to quit the application.",
     ));
-
+    Dialog::new()
+        .title("enter project name please")
+    .content(
+        .with_name("proj_name")
+    )
     siv.add_global_callback('q',|s| s.quit());
     
     siv.run()
