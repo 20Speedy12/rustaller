@@ -1,10 +1,13 @@
 use cursive::{
     align::HAlign,
     event::{EventResult, Key},
-    traits::With,
     view::{scroll::Scroller, Scrollable},
-    views::{Dialog, OnEventView, Panel, TextView},
+    views::{Dialog, OnEventView, Panel, TextView, EditView},
+    traits::*,
 };
+
+
+use cursive::Cursive;
 use std::fs;
 use std::io;
 use std::path::Path;
@@ -54,9 +57,7 @@ fn license(){
                         view.get_content()
                     })
                     .unwrap();
-
-                // Run the next step
-                show_popup(s, &name);
+            
             }),
     );
 
