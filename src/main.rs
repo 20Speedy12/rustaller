@@ -45,7 +45,6 @@ fn license(){
             .padding_lrtb(1, 1, 1, 0)
             .content(
                 EditView::new()
-                    .on_submit(show_popup)
                     .with_name("licensing")
                     .fixed_width(20),
             )
