@@ -9,19 +9,29 @@ use std::fs;
 use std::io;
 use std::path::Path;
 mod mtp;
-//hi :3
+
 fn main() {
     let mut siv = cursive::default();
     siv.add_layer(TextView::new(
-        "Please type me for project\n\
-         Press q to quit the application.",
+        "this is unfinished",
     ));
-    Dialog::new()
-        .title("enter project name please")
-    .content(
-        .with_name("proj_name")
-    )
-    siv.add_global_callback('q',|s| s.quit());
+
     
     siv.run()
+}
+
+fn addfile() {
+//idk man do something with mtp funcs
+}
+
+fn addregkey(){
+//michealsoft binbows
+}
+
+fn requirements(){
+//i am a potato >:(
+}
+
+fn license(){
+//i love commiting tax evasion (joke)
 }
