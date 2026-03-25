@@ -23,3 +23,9 @@ pub fn writetojson(paths: &str, installpaths: &str)
     fs::write("./bin/data.json", jsoner.unwrap()).expect("Failed to add file");
 }
   
+pub fn copylicense(pathre: &str)
+{
+    let filepath = "./bin/";
+    let internalpath = filepath.to_owned() + "license.txt";
+    fs::copy(pathre, internalpath);
+}
