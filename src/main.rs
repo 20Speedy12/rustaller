@@ -63,7 +63,7 @@ fn license(){
                         view.get_content()
                     })
                     .unwrap();
-                mtp::copylicense(licensing);
+                mtp::copylicense(&licensing);
             }),
     );
 
