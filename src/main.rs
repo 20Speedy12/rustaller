@@ -14,6 +14,13 @@ use std::path::Path;
 mod mtp;
 
 fn main() {
+    if Path::new("./bin").is_dir(){
+    
+    }
+    else{
+        std::fs::create_dir("./bin");
+    }
+    
     let mut siv = cursive::default();
     siv.add_layer(TextView::new(
         "this is unfinished",
@@ -40,7 +47,7 @@ fn license(){
 
     siv.add_layer(
         Dialog::new()
-            .title("enter absolute path to your license.txt file")
+            .title("enter absolute path to your license")
             
             .padding_lrtb(1, 1, 1, 0)
             .content(
@@ -52,11 +59,11 @@ fn license(){
  
                 let licensing = s
                     .call_on_name("name", |view: &mut EditView| {
-                        // We can return content from the closure!
+                        
                         view.get_content()
                     })
                     .unwrap();
-            
+                mtp::copylicense(licensing);
             }),
     );
 
